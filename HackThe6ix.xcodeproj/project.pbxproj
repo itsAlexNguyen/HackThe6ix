@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6244AF6D269295B1D3A5C3 /* Pods_HackThe6ix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82B8E28DE4CBF25BC63A57A /* Pods_HackThe6ix.framework */; };
 		461937F81D68C4A8001008F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461937F71D68C4A8001008F2 /* AppDelegate.swift */; };
 		461937FA1D68C4A8001008F2 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461937F91D68C4A8001008F2 /* CameraVC.swift */; };
 		461937FD1D68C4A8001008F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461937FB1D68C4A8001008F2 /* Main.storyboard */; };
 		461937FF1D68C4A8001008F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461937FE1D68C4A8001008F2 /* Assets.xcassets */; };
 		461938021D68C4A8001008F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461938001D68C4A8001008F2 /* LaunchScreen.storyboard */; };
+		461938101D68CE3F001008F2 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619380E1D68CE3F001008F2 /* PopUpVC.swift */; };
+		461938111D68CE3F001008F2 /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4619380F1D68CE3F001008F2 /* PopUpVC.xib */; };
+		461938131D68D673001008F2 /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461938121D68D673001008F2 /* InformationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		461937FE1D68C4A8001008F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		461938011D68C4A8001008F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		461938031D68C4A8001008F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4619380E1D68CE3F001008F2 /* PopUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		4619380F1D68CE3F001008F2 /* PopUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
+		461938121D68D673001008F2 /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
+		91C996BF8BA6E28AA09F0614 /* Pods-HackThe6ix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackThe6ix.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackThe6ix/Pods-HackThe6ix.release.xcconfig"; sourceTree = "<group>"; };
+		B844BD29B1978855B619D88C /* Pods-HackThe6ix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackThe6ix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackThe6ix/Pods-HackThe6ix.debug.xcconfig"; sourceTree = "<group>"; };
+		F82B8E28DE4CBF25BC63A57A /* Pods_HackThe6ix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackThe6ix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F6244AF6D269295B1D3A5C3 /* Pods_HackThe6ix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				461937F61D68C4A8001008F2 /* HackThe6ix */,
 				461937F51D68C4A8001008F2 /* Products */,
+				A8E5D747754C87463F86ECF0 /* Pods */,
+				E9CE2E7C65BCDBE8354000E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				461937F91D68C4A8001008F2 /* CameraVC.swift */,
+				4619380E1D68CE3F001008F2 /* PopUpVC.swift */,
+				4619380F1D68CE3F001008F2 /* PopUpVC.xib */,
+				461938121D68D673001008F2 /* InformationVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -104,6 +120,23 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		A8E5D747754C87463F86ECF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B844BD29B1978855B619D88C /* Pods-HackThe6ix.debug.xcconfig */,
+				91C996BF8BA6E28AA09F0614 /* Pods-HackThe6ix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E9CE2E7C65BCDBE8354000E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F82B8E28DE4CBF25BC63A57A /* Pods_HackThe6ix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -111,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 461938061D68C4A8001008F2 /* Build configuration list for PBXNativeTarget "HackThe6ix" */;
 			buildPhases = (
+				C023F5029B1CA75548B7A2E0 /* [CP] Check Pods Manifest.lock */,
 				461937F01D68C4A8001008F2 /* Sources */,
 				461937F11D68C4A8001008F2 /* Frameworks */,
 				461937F21D68C4A8001008F2 /* Resources */,
+				32582ADD475F11FAFE44D6EE /* [CP] Embed Pods Frameworks */,
+				14230831452CBFA4E309D6B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				461938021D68C4A8001008F2 /* LaunchScreen.storyboard in Resources */,
+				461938111D68CE3F001008F2 /* PopUpVC.xib in Resources */,
 				461937FF1D68C4A8001008F2 /* Assets.xcassets in Resources */,
 				461937FD1D68C4A8001008F2 /* Main.storyboard in Resources */,
 			);
@@ -171,11 +208,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14230831452CBFA4E309D6B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackThe6ix/Pods-HackThe6ix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32582ADD475F11FAFE44D6EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackThe6ix/Pods-HackThe6ix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C023F5029B1CA75548B7A2E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		461937F01D68C4A8001008F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461938101D68CE3F001008F2 /* PopUpVC.swift in Sources */,
+				461938131D68D673001008F2 /* InformationVC.swift in Sources */,
 				461937FA1D68C4A8001008F2 /* CameraVC.swift in Sources */,
 				461937F81D68C4A8001008F2 /* AppDelegate.swift in Sources */,
 			);
@@ -288,6 +375,7 @@
 		};
 		461938071D68C4A8001008F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B844BD29B1978855B619D88C /* Pods-HackThe6ix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -300,6 +388,7 @@
 		};
 		461938081D68C4A8001008F2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91C996BF8BA6E28AA09F0614 /* Pods-HackThe6ix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -329,6 +418,7 @@
 				461938081D68C4A8001008F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
