@@ -1,12 +1,15 @@
 PODS:
+  - Alamofire (3.4.1)
   - SCRecorder (2.7.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
   - SCRecorder
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   SCRecorder: bbb521dbc222908876ec9cd9156bbc8a893bed44
 
-PODFILE CHECKSUM: 5d0015de4e49914324418fcc8e1b3381eef1ce07
+PODFILE CHECKSUM: fab500ee585ebfd3c60d689b809d74ea53caa230
 
 COCOAPODS: 1.0.1

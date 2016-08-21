@@ -9,10 +9,12 @@
 import UIKit
 
 class PopUpVC: UIViewController {
-    @IBOutlet weak var buttonOne: UIButton!
     @IBOutlet weak var popUpView: UIView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var selectedImageView: UIImageView!
     
-    private var completion = {}
+    private var completion : (name : String, rating : String) -> Void = {_,_ in }
     private var cancelBlock = {}
     
     override func viewDidLoad() {
@@ -21,6 +23,8 @@ class PopUpVC: UIViewController {
         self.popUpView.layer.cornerRadius = 5
         self.popUpView.layer.shadowOpacity = 0.8
         self.popUpView.layer.shadowOffset = CGSizeMake(0.0, 0.0)
+        selectedImageView.clipsToBounds = true
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,8 +32,9 @@ class PopUpVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func showInView(aView: UIView,animated: Bool, withCompletion completion: () -> Void, withCancelBlock cancel : () -> Void){
+    func showInView(aView: UIView, withImage image : UIImage,animated: Bool, withCompletion completion: (name : String, rating : String) -> Void, withCancelBlock cancel : () -> Void){
         aView.addSubview(self.view)
+        selectedImageView.image = image
         self.completion = completion
         self.cancelBlock = cancel
         if animated {
@@ -60,7 +65,7 @@ class PopUpVC: UIViewController {
 
     @IBAction func doneBtnPressed(sender: AnyObject) {
         removeAnimate()
-        completion()
+        completion(name: nameTextField.text!, rating: descriptionTextField.text!)
     }
     @IBAction func cancelBtnPressed(sender: AnyObject) {
         removeAnimate()

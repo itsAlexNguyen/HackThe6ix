@@ -16,6 +16,9 @@
 		461938101D68CE3F001008F2 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619380E1D68CE3F001008F2 /* PopUpVC.swift */; };
 		461938111D68CE3F001008F2 /* PopUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4619380F1D68CE3F001008F2 /* PopUpVC.xib */; };
 		461938131D68D673001008F2 /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461938121D68D673001008F2 /* InformationVC.swift */; };
+		46E158591D68F96A00BC95A6 /* MaterialImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E158581D68F96A00BC95A6 /* MaterialImageView.swift */; };
+		46E1585B1D68FBAA00BC95A6 /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E1585A1D68FBAA00BC95A6 /* SuggestionCell.swift */; };
+		46F59FB01D697CC0003C18A5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F59FAF1D697CC0003C18A5 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		4619380E1D68CE3F001008F2 /* PopUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		4619380F1D68CE3F001008F2 /* PopUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpVC.xib; sourceTree = "<group>"; };
 		461938121D68D673001008F2 /* InformationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
+		46E158581D68F96A00BC95A6 /* MaterialImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialImageView.swift; sourceTree = "<group>"; };
+		46E1585A1D68FBAA00BC95A6 /* SuggestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		46F59FAF1D697CC0003C18A5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		91C996BF8BA6E28AA09F0614 /* Pods-HackThe6ix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackThe6ix.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackThe6ix/Pods-HackThe6ix.release.xcconfig"; sourceTree = "<group>"; };
 		B844BD29B1978855B619D88C /* Pods-HackThe6ix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackThe6ix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackThe6ix/Pods-HackThe6ix.debug.xcconfig"; sourceTree = "<group>"; };
 		F82B8E28DE4CBF25BC63A57A /* Pods_HackThe6ix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackThe6ix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +85,7 @@
 		461938091D68C56E001008F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				46F59FAF1D697CC0003C18A5 /* Item.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -86,8 +93,10 @@
 		4619380A1D68C575001008F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				46E158571D68F95500BC95A6 /* MaterialView */,
 				461937FB1D68C4A8001008F2 /* Main.storyboard */,
 				461938001D68C4A8001008F2 /* LaunchScreen.storyboard */,
+				46E1585A1D68FBAA00BC95A6 /* SuggestionCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -118,6 +127,14 @@
 			children = (
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		46E158571D68F95500BC95A6 /* MaterialView */ = {
+			isa = PBXGroup;
+			children = (
+				46E158581D68F96A00BC95A6 /* MaterialImageView.swift */,
+			);
+			name = MaterialView;
 			sourceTree = "<group>";
 		};
 		A8E5D747754C87463F86ECF0 /* Pods */ = {
@@ -262,7 +279,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				461938101D68CE3F001008F2 /* PopUpVC.swift in Sources */,
+				46E158591D68F96A00BC95A6 /* MaterialImageView.swift in Sources */,
 				461938131D68D673001008F2 /* InformationVC.swift in Sources */,
+				46E1585B1D68FBAA00BC95A6 /* SuggestionCell.swift in Sources */,
+				46F59FB01D697CC0003C18A5 /* Item.swift in Sources */,
 				461937FA1D68C4A8001008F2 /* CameraVC.swift in Sources */,
 				461937F81D68C4A8001008F2 /* AppDelegate.swift in Sources */,
 			);

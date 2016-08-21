@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--CameraVC-->
@@ -53,6 +54,13 @@
                                             <action selector="switchCameraBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grO-fE-d9Y"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="fJf-IZ-1rU">
+                                        <rect key="frame" x="290" y="280" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Ya4-9E-6tP"/>
+                                            <constraint firstAttribute="height" constant="20" id="juJ-yu-VXk"/>
+                                        </constraints>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -61,6 +69,8 @@
                                     <constraint firstAttribute="trailing" secondItem="dB4-x6-vmS" secondAttribute="trailing" constant="20" id="VKj-33-mJw"/>
                                     <constraint firstAttribute="bottom" secondItem="3J8-IC-ZBn" secondAttribute="bottom" constant="25" id="bbJ-ww-RiW"/>
                                     <constraint firstItem="dB4-x6-vmS" firstAttribute="top" secondItem="t7c-uA-OGV" secondAttribute="top" constant="20" id="fhc-dh-xz7"/>
+                                    <constraint firstItem="fJf-IZ-1rU" firstAttribute="centerX" secondItem="t7c-uA-OGV" secondAttribute="centerX" id="kne-oX-4kE"/>
+                                    <constraint firstItem="fJf-IZ-1rU" firstAttribute="centerY" secondItem="t7c-uA-OGV" secondAttribute="centerY" id="m9t-n6-RQS"/>
                                     <constraint firstItem="5BE-m3-KJ5" firstAttribute="leading" secondItem="t7c-uA-OGV" secondAttribute="leading" constant="20" id="r8A-Jr-49Y"/>
                                 </constraints>
                             </view>
@@ -76,6 +86,7 @@
                     <connections>
                         <outlet property="flashBtn" destination="5BE-m3-KJ5" id="vaF-Fz-aL2"/>
                         <outlet property="previewLayer" destination="t7c-uA-OGV" id="Nux-WP-jtF"/>
+                        <outlet property="refreshSpinner" destination="fJf-IZ-1rU" id="rsu-Bt-EvM"/>
                         <segue destination="6Gn-sj-WRJ" kind="show" identifier="MAINTOSUGGESTION" id="FDk-JE-FYM"/>
                     </connections>
                 </viewController>
@@ -95,22 +106,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kNn-68-Op5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kNn-68-Op5" customClass="MaterialImageView" customModule="HackThe6ix" customModuleProvider="target">
                                 <rect key="frame" x="207" y="40" width="187" height="187"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="187" id="ABj-Sf-CXF"/>
                                     <constraint firstAttribute="width" constant="187" id="hnX-Ey-eeX"/>
                                 </constraints>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xvf-jN-obY">
+                                <rect key="frame" x="20" y="277" width="560" height="323"/>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sFF-y6-VHn">
+                                    <size key="itemSize" width="126" height="108"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuggestionCell" id="Ia9-hQ-dwn" customClass="SuggestionCell" customModule="HackThe6ix" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="126" height="108"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="126" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ht6Logo" translatesAutoresizingMaskIntoConstraints="NO" id="J0f-Eh-0Yt" customClass="MaterialImageView" customModule="HackThe6ix" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="108"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="J0f-Eh-0Yt" firstAttribute="leading" secondItem="Ia9-hQ-dwn" secondAttribute="leading" id="Nud-2v-QwL"/>
+                                            <constraint firstItem="J0f-Eh-0Yt" firstAttribute="top" secondItem="Ia9-hQ-dwn" secondAttribute="top" id="gTH-XD-BHd"/>
+                                            <constraint firstAttribute="trailing" secondItem="J0f-Eh-0Yt" secondAttribute="trailing" id="unC-nQ-zRy"/>
+                                            <constraint firstAttribute="bottom" secondItem="J0f-Eh-0Yt" secondAttribute="bottom" id="ydT-9C-5XI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="suggestImageView" destination="J0f-Eh-0Yt" id="QPU-tv-ted"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Gn-sj-WRJ" id="YgH-cy-2fM"/>
+                                    <outlet property="delegate" destination="6Gn-sj-WRJ" id="qKx-Lj-dZo"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwO-c2-4QK">
+                                <rect key="frame" x="26" y="40" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dfj-xB-11p"/>
+                                    <constraint firstAttribute="width" constant="34" id="qEF-54-Q3K"/>
+                                </constraints>
+                                <state key="normal" image="Back Chevron"/>
+                                <connections>
+                                    <action selector="backBtnPressed:" destination="6Gn-sj-WRJ" eventType="touchUpInside" id="lfk-jx-AUS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kNn-68-Op5" firstAttribute="centerX" secondItem="N3X-KW-TkW" secondAttribute="centerX" id="E9b-zQ-NsN"/>
                             <constraint firstItem="kNn-68-Op5" firstAttribute="top" secondItem="mBc-P9-Ws6" secondAttribute="bottom" constant="20" id="ItQ-Pd-1BD"/>
+                            <constraint firstItem="EwO-c2-4QK" firstAttribute="top" secondItem="mBc-P9-Ws6" secondAttribute="bottom" constant="20" id="Kxr-DY-mZk"/>
+                            <constraint firstItem="wcJ-Fr-N76" firstAttribute="top" secondItem="Xvf-jN-obY" secondAttribute="bottom" id="Rxt-KG-e8O"/>
+                            <constraint firstItem="Xvf-jN-obY" firstAttribute="leading" secondItem="N3X-KW-TkW" secondAttribute="leading" constant="20" id="T7W-o6-aeB"/>
+                            <constraint firstItem="Xvf-jN-obY" firstAttribute="leading" secondItem="N3X-KW-TkW" secondAttribute="leadingMargin" constant="-20" id="emH-z4-0sa"/>
+                            <constraint firstAttribute="trailing" secondItem="Xvf-jN-obY" secondAttribute="trailing" constant="20" id="gZ1-7H-J4j"/>
+                            <constraint firstItem="Xvf-jN-obY" firstAttribute="trailing" secondItem="N3X-KW-TkW" secondAttribute="trailingMargin" constant="-20" id="hEe-Bk-t8T"/>
+                            <constraint firstItem="Xvf-jN-obY" firstAttribute="top" secondItem="kNn-68-Op5" secondAttribute="bottom" constant="50" id="i68-xB-OJr"/>
+                            <constraint firstItem="EwO-c2-4QK" firstAttribute="leading" secondItem="N3X-KW-TkW" secondAttribute="leadingMargin" constant="6" id="zXA-b5-kia"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="emH-z4-0sa"/>
+                                <exclude reference="hEe-Bk-t8T"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="selectedImgView" destination="kNn-68-Op5" id="kGr-sa-iBS"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="BACK" id="7GN-4d-tWD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NW-c3-aVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -119,8 +195,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back Chevron" width="12" height="21"/>
         <image name="ShutterBtn" width="112" height="112"/>
         <image name="SwitchCameraBtn" width="52" height="52"/>
         <image name="flash_button" width="52" height="52"/>
+        <image name="ht6Logo" width="121" height="232"/>
     </resources>
 </document>
